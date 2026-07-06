@@ -8,4 +8,4 @@ class Plant:
             height = int(input("Height: "))
         age = 0
         while age <= 0:
-            age = int(input("Age: "))
+            age = int(input("Age: ")) 
