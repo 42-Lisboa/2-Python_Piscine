@@ -1,31 +1,11 @@
-Welcome to CodeCultivation!
-Building on your Python fundamentals from the first activity, you’ll now tackle more
-complex programming challenges by creating a comprehensive garden data management
-system. This project introduces advanced concepts that make Python a powerful tool for
-modeling real-world systems.
-You’ll work on:
-• Understanding how Python programs are structured and executed
-• Organizing data using an object-oriented approach
-• Creating reusable code components
-• Building systems that can adapt and extend
-• Protecting data integrity in collaborative environments
-• Designing scalable software architectures
-Each exercise builds on the previous ones, creating a complete digital garden ecosystem
-by the end.
-IMPORTANT: This module starts with basic Python program structure,
-then progresses to Object-Oriented Programming. Each exercise should
-contain the requested definitions and any required code. You may
-include simple test code at the bottom of each file using if __name__
-== "__main__": blocks for your own testing.
-
-# 🌱 py00 — Growing Code
+# 🌿 py01 — Code Cultivation
 
 <p align="left">
   <img src="https://img.shields.io/badge/Language-Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/Grade-100%2F100-brightgreen?style=for-the-badge" />
 </p>
 
-> Introductory Python module from the Piscine. Covers language fundamentals: output, variables, arithmetic operations, conditionals, loops, recursion, and type hints.
+> Object-Oriented Python module from the Piscine. Builds on py00 fundamentals to create a complete digital garden ecosystem using OOP: classes, inheritance, encapsulation, and advanced patterns.
 
 ---
 
@@ -33,7 +13,7 @@ include simple test code at the bottom of each file using if __name__
 
 - [Exercises](#exercises)
 - [Key Techniques](#key-techniques)
-- [How to Test](#how-to-test)
+- [General Rules](#general-rules)
 - [Concepts Learned](#concepts-learned)
 
 ---
@@ -43,14 +23,13 @@ include simple test code at the bottom of each file using if __name__
 
 | # | File | Description |
 |---|------|-------------|
-| 00 | `ft_hello_garden.py` | Greet the garden community |
-| 01 | `ft_garden_name.py` | Display the garden name |
-| 02 | `ft_plot_area.py` | Calculate a garden plot area |
-| 03 | `ft_harvest_total.py` | Add up harvest weights |
-| 04 | `ft_plant_age.py` | Check if a plant is ready |
-| 05 | `ft_water_reminder.py` | Check if plants need water |
-| 06 | `ft_count_harvest.py` | Count days to harvest (iterative and recursive) |
-| 07 | `ft_seed_inventory.py` | Seed inventory with type hints |
+| 00 | `ft_garden_intro.py` | Program entry point with `__name__ == "__main__"` pattern |
+| 01 | `ft_garden_data.py` | `Plant` class with attributes and `show()` method |
+| 02 | `ft_plant_growth.py` | `grow()` and `age()` methods — simulate a week of growth |
+| 03 | `ft_plant_factory.py` | `__init__()` constructor — create plants with initial values |
+| 04 | `ft_garden_security.py` | Encapsulation — getters, setters, and input validation |
+| 05 | `ft_plant_types.py` | Inheritance — `Flower`, `Tree`, and `Vegetable` subclasses |
+| 06 | `ft_garden_analytics.py` | Static/class methods, nested classes, and `Seed` subclass |
 
 <p align="right"><a href="#-summary">⬆ back to summary</a></p>
 </details>
@@ -60,43 +39,33 @@ include simple test code at the bottom of each file using if __name__
 <a name="key-techniques"></a>
 <details open><summary><h2>🛠 Key Techniques</h2></summary>
 
-- **`print()`** — formatted output with f-strings
-- **Variables and types** — `int`, `float`, `str`, `bool`
-- **Arithmetic operators** — `+`, `-`, `*`, `/`, `//`, `%`
-- **Conditionals** — `if`, `elif`, `else`
-- **Loops** — `while` and `for`
-- **Functions** — `def`, parameters, `return`
-- **Recursion** — function that calls itself (ex06)
-- **Type hints** — type annotations (`str`, `int`, `None`) (ex07)
+- **`if __name__ == "__main__"`** — program entry point and import safety (ex00)
+- **Classes** — `class`, `__init__()`, attributes, and methods (ex01)
+- **Instance methods** — `grow()`, `age()`, `show()` operating on object state (ex02)
+- **Constructors** — initializing objects with values at creation time (ex03)
+- **Encapsulation** — protected attributes (`_attr`), `get_*()`/`set_*()` with validation (ex04)
+- **Inheritance** — `Flower`, `Tree`, `Vegetable` extending `Plant`; method overriding (ex05)
+- **`super()`** — calling parent class methods from child classes (ex05)
+- **Static methods** — `@staticmethod`, logic that doesn't depend on instance state (ex06)
+- **Class methods** — `@classmethod`, alternative constructors (ex06)
+- **Nested classes** — internal `Stats` tracker class inside `Plant` (ex06)
+- **Type hints** — all functions and methods annotated with `mypy`-compatible types
+- **`flake8`** — PEP8 linting enforced throughout the module
 
 <p align="right"><a href="#-summary">⬆ back to summary</a></p>
 </details>
 
 ---
 
-<a name="how-to-test"></a>
-<details open><summary><h2>▶️ How to Test</h2></summary>
+<a name="general-rules"></a>
+<details open><summary><h2>📐 General Rules</h2></summary>
 
-The module includes a `main.py` helper to test exercises individually or all at once.
-
-```bash
-python3 main.py
-```
-
-When run, the interactive menu lets you choose:
-
-```
-0 - ft_hello_garden
-1 - ft_garden_name
-2 - ft_plot_area
-3 - ft_harvest_total
-4 - ft_plant_age
-5 - ft_water_reminder
-6 - ft_count_harvest
-7 - ft_seed_inventory
-```
-
-> ⚠️ All exercise `.py` files must be in the same folder as `main.py`.
+- Python **3.10+** required
+- Code must pass **`flake8`** linter standards
+- All functions and methods must include **type hints** — checked with `mypy`
+- Each exercise in its own file and directory (`ex0/` through `ex6/`)
+- Naming conventions: classes in `PascalCase`, functions and variables in `snake_case`
+- Each exercise builds on the previous — the `Plant` class evolves across all exercises
 
 <p align="right"><a href="#-summary">⬆ back to summary</a></p>
 </details>
@@ -106,11 +75,14 @@ When run, the interactive menu lets you choose:
 <a name="concepts-learned"></a>
 <details open><summary><h2>📚 Concepts Learned</h2></summary>
 
-- Basic structure of a Python script
-- Differences between **iterative** and **recursive** approaches to the same problem
-- Using **type hints** to document functions (`seed_type: str`, `quantity: int`, `unit: str`)
-- Handling invalid cases with `else` (ex07 — unknown unit)
-- Organizing code into reusable functions
+- How Python programs are structured and executed (`__main__` entry point)
+- Modeling real-world entities with **classes and objects**
+- Evolving a class progressively — from bare attributes to full OOP patterns
+- Protecting data integrity with **encapsulation** and validation logic
+- Reusing code through **inheritance** and avoiding duplication across subclasses
+- Distinguishing **instance**, **class**, and **static** methods and when to use each
+- Using **nested classes** to encapsulate internal subsystems (e.g. usage statistics)
+- Building an **inheritance chain**: `Plant` → `Flower` → `Seed`
 
 <p align="right"><a href="#-summary">⬆ back to summary</a></p>
 </details>
