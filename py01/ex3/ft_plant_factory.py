@@ -19,7 +19,7 @@ class Plant:
     def age(self) -> None:
         self.current_age += 1
 
-    def simulate_growth(self, days: int = 1) -> None:
+    def apply_growth(self, days: int = 1) -> None:
         for _ in range(days):
             self.grow()
             self.age()
