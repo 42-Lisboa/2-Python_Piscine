@@ -1,5 +1,7 @@
 #! /usr/bin/env python3
 
+# =============== Plant Class with Show Method ================
+
 class Plant:
     def __init__(self, plant_name: str, height: int, age: int):
         self.plant_name = plant_name
@@ -11,6 +13,8 @@ class Plant:
             f"{self.plant_name.capitalize()}: "
             f"{self.height}cm, {self.age} days old")
 
+
+# =================== Garden Data function ====================
 
 def garden_data() -> None:
     plant1 = Plant(input("1st Plant: "),
@@ -25,6 +29,8 @@ def garden_data() -> None:
     plant2.show()
     plant3.show()
 
+
+# ======================= Program Test ========================
 
 if __name__ == "__main__":
     garden_data()

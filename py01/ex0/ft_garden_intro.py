@@ -1,5 +1,7 @@
 #! /usr/bin/env python3
 
+# =================== Garden Intro function ====================
+
 def garden_intro() -> None:
     plant = input("Plant: ")
     height = 0
@@ -18,6 +20,8 @@ def garden_intro() -> None:
         print(f"Age: {age} days")
     print("====== End of Program ======")
 
+
+# ======================= Program Test ========================
 
 if __name__ == "__main__":
     garden_intro()

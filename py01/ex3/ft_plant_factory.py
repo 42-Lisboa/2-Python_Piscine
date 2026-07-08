@@ -6,7 +6,7 @@ class Plant:
     def __init__(
             self,
             plant_name: str, height: float,
-            current_age: int, growth_cm: float, days: int):
+            current_age: int, growth_cm: float = 2.0, days: int = 7):
         self.plant_name = plant_name
         self.height = height
         self.current_age = current_age
@@ -30,26 +30,24 @@ class Plant:
             f"{self.height:.1f}cm, {self.current_age} days old")
 
 
-# =================== Plant Growth Simulator ===================
+# ======================= Plant Factory =======================
 
-def plant_growth_simulator() -> None:
-    plant1 = Plant(
-        input("Plant: "), float(input("Height: ")), int(input("Age: ")),
-        float(input("Growth (cm/day): ")), int(input("Growth days: ")))
+def plant_factory() -> None:
+    garden_plants = [
+        Plant("Rose", 25.0, 30),
+        Plant("Oak", 200.0, 365),
+        Plant("Cactus", 5.0, 90),
+        Plant("Sunflower", 80.0, 45),
+        Plant("Fern", 15.0, 120)
+    ]
 
-    initial_height = plant1.height
-    print("=== Garden Plant Growth ===")
-    plant1.show()
-    for i in range(1, plant1.days + 1):
-        plant1.simulate_growth()
-        print(f"=== Day {i} ===")
-        plant1.show()
-
-    total_growth = plant1.height - initial_height
-    print(f"Growth this week: {total_growth:.1f}cm")
+    print("======= Plant Factory Output =======")
+    for plant in garden_plants:
+        print("Created: ", end="")
+        plant.show()
 
 
 # ======================= Program Test ========================
 
 if __name__ == "__main__":
-    plant_growth_simulator()
+    plant_factory()
