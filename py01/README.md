@@ -15,6 +15,7 @@
 - [Key Techniques](#key-techniques)
 - [General Rules](#general-rules)
 - [Concepts Learned](#concepts-learned)
+- [Resources](#resources)
 
 ---
 
@@ -83,6 +84,18 @@
 - Distinguishing **instance**, **class**, and **static** methods and when to use each
 - Using **nested classes** to encapsulate internal subsystems (e.g. usage statistics)
 - Building an **inheritance chain**: `Plant` → `Flower` → `Seed`
+
+<p align="right"><a href="#-summary">⬆ back to summary</a></p>
+</details>
+
+---
+
+<a name="resources"></a>
+<details open><summary><h2>🔗 Resources</h2></summary>
+
+| Title | Author | Description |
+|-------|--------|-------------|
+| [Entendendo Programação Orientada a Objetos](https://youtu.be/x9aLELLVzjQ?si=ZJXTY8uMw4QBR4JE) | [Code By Duda](https://www.youtube.com/@CodeByDuda) | A beginner-friendly introduction to Object-Oriented Programming in Python, covering the core pillars of OOP: classes, objects, attributes, methods, encapsulation, inheritance, and polymorphism. |
 
 <p align="right"><a href="#-summary">⬆ back to summary</a></p>
 </details>

@@ -15,6 +15,7 @@
 - [Key Techniques](#key-techniques)
 - [How to Test](#how-to-test)
 - [Concepts Learned](#concepts-learned)
+- [Resources](#resources)
 
 ---
 
@@ -74,6 +75,7 @@ When run, the interactive menu lets you choose:
 5 - ft_water_reminder
 6 - ft_count_harvest
 7 - ft_seed_inventory
+a - test all
 ```
 
 > ⚠️ All exercise `.py` files must be in the same folder as `main.py`.
@@ -91,6 +93,18 @@ When run, the interactive menu lets you choose:
 - Using **type hints** to document functions (`seed_type: str`, `quantity: int`, `unit: str`)
 - Handling invalid cases with `else` (ex07 — unknown unit)
 - Organizing code into reusable functions
+
+<p align="right"><a href="#-summary">⬆ back to summary</a></p>
+</details>
+
+---
+
+<a name="resources"></a>
+<details open><summary><h2>🔗 Resources</h2></summary>
+
+| Title | Author | Description |
+|-------|--------|------|
+| [Learn Python in 1 hour! 🐍](https://youtu.be/8KCuHHeC_M0?si=p6PEO2tNAUbJYOKQ) | [Bro Code](https://www.youtube.com/@BroCodez) | Bro Code guides beginners through essential programming concepts, starting with setting up the Python interpreter and PyCharm. The tutorial covers variables, data types, arithmetic operators, and type casting, ending with a guide on accepting user input.
 
 <p align="right"><a href="#-summary">⬆ back to summary</a></p>
 </details>
