@@ -38,13 +38,22 @@ def gen_player_achievements() -> set:
 def achievements_tracker_system() -> None:
     print("\n============= ⚔️  Achievements Tracker System ⚔️ =============\n")
 
-    players = ["Alice", "Bob", "Charlie", "Dylan"]
+    players: dict = {
+        "Alice": set(),
+        "Bob": set(),
+        "Charlie": set(),
+        "Dylan": set()
+        }
+
     for player in players:
-        print(f"🎮 Player {player}: {gen_player_achievements()}")
+        players[player] = gen_player_achievements()
+        print(f"🎮 Player {player}: {players[player]}")
 
-    achievements_union = 
-
-
+    achievements_union = (players["Alice"] |
+                          players["Bob"] |
+                          players["Charlie"] |
+                          players["Dylan"])
+    print(f"\n✅ All distinct achievements: {achievements_union}")
 
 
 # ============================== Program Test ================================
