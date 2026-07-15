@@ -35,6 +35,7 @@ def test_watering_system() -> None:
         water_plant("Carrots")
     except PlantError as e:
         print(f"{e}\n... ending tests and returning to main")
+        return
     finally:
         print("Closing watering system\n")
 
@@ -45,6 +46,7 @@ def test_watering_system() -> None:
         water_plant("lettuce")
     except PlantError as e:
         print(f"{e}\n... ending tests and returning to main")
+        return
     finally:
         print("Closing watering system\n")
 
