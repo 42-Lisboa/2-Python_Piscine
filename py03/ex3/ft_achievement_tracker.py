@@ -2,11 +2,7 @@
 
 import random
 
-
-# ======================= Achievements Set Creation ==========================
-
-def gen_player_achievements() -> set:
-    achievements_list = [
+ACHIEVEMENTS_CATALOG = [
          "🛠️  Crafting Genius",
          "🌍  World Savior",
          "🗺️  Master Explorer",
@@ -28,8 +24,13 @@ def gen_player_achievements() -> set:
          "⚙️  Gadget Inventor",
          "👑  Ultimate Legend"
     ]
+
+
+# ======================= Achievements Set Creation ==========================
+
+def gen_player_achievements() -> set:
     number_set = random.randint(4, 20)
-    achievements_set = set(random.sample(achievements_list, k=number_set))
+    achievements_set = set(random.sample(ACHIEVEMENTS_CATALOG, k=number_set))
     return achievements_set
 
 
@@ -84,30 +85,8 @@ def achievements_tracker_system() -> None:
     # ------------------------------------------ (Difference - .difference())
     print("\nMissing achievements (Difference)\n"
           "----------------------------------")
-    achievements_list = set([
-         "🛠️  Crafting Genius",
-         "🌍  World Savior",
-         "🗺️  Master Explorer",
-         "💎  Collector Supreme",
-         "🛡️  Untouchable",
-         "⚔️  Boss Slayer",
-         "⚒️  Forge Master",
-         "🕊️  Realm Liberator",
-         "🧭  Uncharted Pathfinder",
-         "🏺  Relic Hunter",
-         "🥷  Flawless Assassin",
-         "🐉  Dragon Bane",
-         "🧪  Alchemy Prodigy",
-         "🦸  Champion of Light",
-         "🏔️  Summit Conqueror",
-         "💰  Treasure Hoarder",
-         "👻  Phantom Dodger",
-         "👹  Monster Crusher",
-         "⚙️  Gadget Inventor",
-         "👑  Ultimate Legend"
-    ])
     for player, player_set in players.items():
-        achievements_diff2 = achievements_list.difference(player_set)
+        achievements_diff2 = set(ACHIEVEMENTS_CATALOG).difference(player_set)
         print(f"{player} is missing: {achievements_diff2}\n"
               f">>>>>>>>>>>>>>>> Total missing: {len(achievements_diff2)}\n"
               "----------------------------------")
